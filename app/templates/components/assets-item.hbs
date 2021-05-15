@@ -1,0 +1,54 @@
+<div class="asset-item">
+  <div class="asset-item__preview">
+    {{#if this.asset.previewImage}}
+      <img  class="asset-item__preview-image" src="{{this.asset.previewImage}}" alt="{{this.asset.title}}">
+    {{/if}}
+
+    <div class="asset-item__info">
+      <button type="button" class="asset-item__bookmark" {{on 'click' (fn @addToBookMark this.asset)}}>
+        {{#if this.asset.isAddToBookMark}}
+          {{svg-jar "#bookmark-active" width="12px" height="12px"}}
+        {{else}}
+          {{svg-jar "#bookmark" width="12px" height="12px"}}
+        {{/if}}
+      </button>
+
+      <div class="asset-total">
+        <div class="asset-total__count">{{this.asset.usedTotalCount}}</div>
+        <div class="asset-total__description">Used (total)</div>
+      </div>
+
+      {{#if this.asset.isPDFType}}
+        <a class="asset-download-btn" target="_blank" href="{{this.asset.originalFileSrc}}"  download>Download</a>
+      {{else}}
+        <button {{on 'click' (fn @onUseAsset this.asset)}} type="button" class="button-use">use</button>
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="asset-item__body">
+    <div class="asset-item__title">
+      <Ui::AssetTypeView @assetTypeId={{this.asset.type}}>
+        {{this.asset.title}}
+      </Ui::AssetTypeView>
+    </div>
+
+    {{#if this.asset.tags}}
+      <Tags @tags={{this.asset.tags}}/>
+    {{/if}}
+
+    {{#if this.asset.description}}
+      <div class="asset-item__description">{{this.asset.description}}</div>
+    {{/if}}
+  </div>
+
+  {{#if this.asset.isArticleType}}
+    <div class="asset-item__footer">
+      <a class="asset-link" href="{{this.asset.externalLink.href}}" title="{{this.asset.externalLink.title}}" target="_blank">
+        <span class="asset-link__icon">{{svg-jar "#article" width="15px" height="15px"}}</span>
+        <span class="asset-link__title">{{this.asset.externalLink.title}}</span>
+        <span class="asset-link__preview">{{this.asset.externalLink.href}}</span>
+      </a>
+    </div>
+  {{/if}}
+</div>

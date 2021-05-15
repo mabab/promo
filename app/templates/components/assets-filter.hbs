@@ -1,0 +1,16 @@
+<div class="assets-filter">
+  <div class="assets-filter__title">Asset type</div>
+  <ul class="assets-filter__list">
+
+    {{#each-in this.assetTypes as |key value|}}
+      <li  class="assets-filter__item">
+        <AssetsFilterItem
+          @currentState={{@currentAssetTypes}}
+          @key={{key}}
+          @value={{value}}
+          @onChange={{this.onChange}}
+        />
+      </li>
+    {{/each-in}}
+  </ul>
+</div>

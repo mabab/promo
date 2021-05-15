@@ -1,0 +1,9 @@
+<label class="assets-filter__checkbox">
+    <input type="checkbox" class="checkbox-input" value={{@value}} {{on 'change' @onChange}} checked={{this.isChecked}}>
+    <span class="checkbox-icon">
+      {{svg-jar "#checkbox-active" class="checkbox-icon--active" width="16px" height="16px"}}
+    </span>
+    <Ui::AssetTypeView @assetTypeId={{@value}}>
+      {{@key}}
+    </Ui::AssetTypeView>
+</label>
