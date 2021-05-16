@@ -1,0 +1,29 @@
+.assets-filter{
+  display: block;
+  padding: 20px 16px;
+  background-color: white;
+  border-radius: var(--border-radius-primary);
+}
+
+.assets-filter__title{
+  font: var(--font-title);
+}
+.assets-filter__item{
+  text-transform: capitalize;
+}
+
+.assets-filter__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.assets-filter__title + .assets-filter__list{
+  margin-top: 12px;
+}
+
+.assets-filter__checkbox{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}

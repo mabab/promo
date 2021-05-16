@@ -1,0 +1,31 @@
+.button-use{
+  border-radius: var(--border-radius-primary);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 9px;
+  border:  none;
+  background: hsla(214, 100%, var(--button-use-bg-color-lightness, 64%), 1);
+  color: inherit;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.button-use:hover{
+  --button-use-bg-color-lightness: 70%;
+}
+
+.asset-download-btn{
+  border-radius: var(--border-radius-primary);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 9px;
+  border:  1px solid white;
+  background: none;
+  color: inherit;
+  transition: .3s;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}

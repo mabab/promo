@@ -28,10 +28,12 @@
 
   <div class="asset-item__body">
     <div class="asset-item__title">
-      <Ui::AssetTypeView @assetTypeId={{this.asset.type}}>
+      <Assets::TypeView @assetTypeId={{this.asset.type}}>
         {{this.asset.title}}
-      </Ui::AssetTypeView>
+      </Assets::TypeView>
     </div>
+
+
 
     {{#if this.asset.tags}}
       <Tags @tags={{this.asset.tags}}/>

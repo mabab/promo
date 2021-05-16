@@ -1,0 +1,31 @@
+@import "filter.css";
+@import "item.css";
+@import "checkbox.css";
+@import "button.css";
+@import "link.css";
+@import "total.css";
+@import "type-view.css";
+
+.assets {
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  max-width: 1254px;
+  grid-template-columns: 296px 1fr;
+  grid-template-rows: auto;
+  align-content: flex-start;
+  gap: 22px;
+  padding: 40px 20px;
+}
+
+.assets__main {
+  display: grid;
+  grid-template-columns: repeat(4, 216px);
+  justify-content: center;
+  align-content: center;
+  gap: 24px;
+}
+
+.assets__sidebar {
+  width: 296px;
+}

@@ -1,0 +1,19 @@
+.asset-type-view{
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.asset-type-view span{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.asset-type-view svg{
+  flex: 0 0 16px;
+  display: inline-block;
+  max-width: 16px;
+  max-height: 16px;
+  margin-right: 6px;
+}

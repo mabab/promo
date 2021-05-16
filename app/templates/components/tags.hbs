@@ -1,5 +1,29 @@
-<div class="tags">
-  {{#each @tags as |tag|}}
-    <div class="tag">{{tag}}</div>
-  {{/each}}
+<div class="tags-wrap">
+  <div class="tags tags--hidden" {{did-insert this.insertContainer}}>
+    {{#each @tags as |tag|}}
+      <div class="tag">{{tag}}</div>
+    {{/each}}
+  </div>
+
+  <div class="tags">
+    {{#each this.visibleTags as |tag|}}
+      {{tag}}
+    {{/each}}
+
+    {{#if this.hideTags.length}}
+      <div class="tags-more">
+        <div class="tags-more__counter">
+          +{{this.hideTags.length}}
+        </div>
+
+        <div class="tags-more__tooltip">
+          <div class="tags">
+            {{#each this.hideTags as |tag|}}
+              {{tag}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    {{/if}}
+  </div>
 </div>

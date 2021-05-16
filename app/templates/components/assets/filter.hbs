@@ -4,7 +4,7 @@
 
     {{#each-in this.assetTypes as |key value|}}
       <li  class="assets-filter__item">
-        <AssetsFilterItem
+        <Assets::Filter::Item
           @currentState={{@currentAssetTypes}}
           @key={{key}}
           @value={{value}}
